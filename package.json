@@ -1,0 +1,14 @@
+{
+  "name": "test-driven-development-03",
+  "version": "1.0.0",
+  "description": "28/04/2020",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1jest --verbose"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^25.4.0"
+  }
+}
