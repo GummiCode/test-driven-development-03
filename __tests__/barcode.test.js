@@ -5,11 +5,6 @@ const {
     removeItem
 } = require("../src/barcode.js");
 
-    //1. scan item
-    //2. Add item to basket
-    //3. View total cost of basket
-    //4. Remove an item from the basket.
-
 //Test Data
 const b101 = {
     item: "apple",
@@ -152,24 +147,24 @@ describe("viewTotal", () => {
 
 describe("removeItem", () => {
 
-    xit("removes an item from the basket via its barcode", () => {
+    it("removes an item from the basket via its barcode", () => {
         basket = [b101, b102, b103, b104];
         const expected = [b101, b103, b104];
-        const result = removeItem(b102);
+        const result = removeItem(basket, "b102");
         expect(result).toEqual(expected);
     });
 
-    xit("removes an item from the basket via its barcode", () => {
+    it("removes an item from the basket via its barcode", () => {
         basket = [b101];
         const expected = [];
-        const result = removeItem(b101);
+        const result = removeItem(basket, "b101");
         expect(result).toEqual(expected);
     });
 
-    xit("removes an item from the basket via its barcode. Only removes one instance of that item", () => {
+    it("removes an item from the basket via its barcode. Only removes one instance of that item", () => {
         basket = [b101, b101, b102, b102, b103, b103, b104];
         const expected = [b101, b101, b102, b102, b103, b104];
-        const result = removeItem(b103);
+        const result = removeItem(basket, "b103");
         expect(result).toEqual(expected);
     });
 });
